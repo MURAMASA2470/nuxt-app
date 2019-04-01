@@ -14,9 +14,9 @@
         <vuetify-logo />
       </div>
       <v-card>
-        <v-card-title class="headline">Welcome to the Vuetify + Nuxt.js template</v-card-title>
+        <v-card-title class="headline">yuuuuuuuuuuuu</v-card-title>
         <v-card-text>
-          yuuuuuuu
+          ゆうくんはHALのトッププレイヤー
         </v-card-text>
         <v-card-actions>
           <v-spacer />
