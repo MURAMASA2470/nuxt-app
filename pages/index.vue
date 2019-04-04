@@ -1,28 +1,20 @@
 <template>
-  <v-layout
-    column
-    justify-center
-    align-center
-  >
-    <v-flex
-      xs12
-      sm8
-      md6
-    >
+  <v-layout column justify-center align-center>
+    <v-flex xs12 sm8 md6>
 
-    <btn-style-radio :items="items"></btn-style-radio>
+    <radio-group :items="items"></radio-group>
 
     </v-flex>
   </v-layout>
 </template>
 
 <script>
-import BtnStyleRadio from '~/components/btn-style-radio.vue'
+import RadioGroup from '~/components/radio-group.vue'
 import data from '~/static/items.json'
 
 export default {
   components: {
-    BtnStyleRadio
+    RadioGroup
   }, 
   data() {
     return {

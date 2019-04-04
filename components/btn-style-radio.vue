@@ -3,9 +3,9 @@
 
     <div class="radio-btn-group btn-style-radio">
       
-      <div class="radio" v-for="item in items" :key="item.id">
-        <input type="radio" name="radio" :value="item.id" :id="item.message" >
-        <label :for="item.message">{{ item.message }} : {{ item.value }} </label>
+      <div class="radio" v-for="content in contents" :key="content.id">
+        <input type="radio" name="radio" :value="content.id" :id="content.message" >
+        <label :for="content.message">{{ content.message }} : {{ content.value }} </label>
       </div>
         
     </div>
@@ -15,9 +15,9 @@
 
 <script>
 export default {
-    props: ['items'], 
+    props: ['contents'], 
     data() {
-        
+
     }
 }
 </script>
