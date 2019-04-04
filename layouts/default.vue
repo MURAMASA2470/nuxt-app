@@ -1,5 +1,7 @@
 <template>
   <v-app dark>
+    
+    <!-- sideNav -->
     <v-navigation-drawer
       v-model="drawer"
       :mini-variant="miniVariant"
@@ -24,6 +26,7 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
+
     <v-toolbar
       :clipped-left="clipped"
       fixed
@@ -57,11 +60,13 @@
         <v-icon>menu</v-icon>
       </v-btn>
     </v-toolbar>
+
     <v-content>
       <v-container>
         <nuxt />
       </v-container>
     </v-content>
+
     <v-navigation-drawer
       v-model="rightDrawer"
       :right="right"
@@ -77,12 +82,15 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
+
+    <!-- footer -->
     <v-footer
       :fixed="fixed"
       app
     >
       <span>&copy; 2019</span>
     </v-footer>
+
   </v-app>
 </template>
 

@@ -33,7 +33,8 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    '~/assets/style/app.styl'
+    '~/assets/style/app.styl', 
+    { src: '~/assets/sass/common.scss', lang: 'scss' },
   ],
 
   /*
@@ -49,6 +50,7 @@ module.exports = {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    ['nuxt-sass-resources-loader', ['~/assets/sass/variable.scss',]],
   ],
   /*
   ** Axios module configuration
