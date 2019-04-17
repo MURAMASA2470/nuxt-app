@@ -1,10 +1,11 @@
 {
     "items" : [
         {
-            "title" : "aaa", 
-            "description" : "aaa", 
+            "groupName" : "bbb", 
+            "title" : "ここはタイトルです",
+            "description" : "サンプルテキスト、<br/><a href=\"#\">ここ</a>は説明欄です",
             "contents" : [
-                { 
+                {   
                     "message" : "こんにちは", 
                     "value" : 150 
                 }, 
@@ -19,10 +20,11 @@
             ]
         },
         {
+            "groupName" : "abc", 
             "title" : "aaa", 
             "description" : "aaa", 
             "contents" : [
-                { 
+                {   
                     "message" : "こんにちは", 
                     "value" : 150 
                 }, 

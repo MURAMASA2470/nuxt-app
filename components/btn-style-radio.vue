@@ -3,9 +3,12 @@
 
     <div class="radio-btn-group btn-style-radio">
       
-      <div class="radio" v-for="content in contents" :key="content.id">
-        <input type="radio" name="radio" :value="content.id" :id="content.message" >
-        <label :for="content.message">{{ content.message }} : {{ content.value }} </label>
+      <div class="radio" v-for="(content, i) in contents" :key="content.id">
+
+        <input v-if="groupName" type="radio" :name="groupName" :value="content.value" :id="unique+i" >
+        <input v-else           type="radio" :name="unique+i" :value="content.value" :id="unique+i" >
+        <label :for="unique+i" v-html="content.message +':'+content.value +':'+ unique+i"></label>
+        
       </div>
         
     </div>
@@ -15,9 +18,14 @@
 
 <script>
 export default {
-    props: ['contents'], 
+    props: { 
+      contents : Object, 
+      groupName : String
+      }, 
     data() {
-
+        return {
+            unique : Math.random().toString(36).substr(2,9)
+        }
     }
 }
 </script>
@@ -26,19 +34,22 @@ export default {
 <style lang="scss" scoped>
 
 .btn-style-radio {
-  display: flex;
+  // display: flex;
   
   .radio {
     margin: 0 .25rem;
+    width: 100%;
     
     label {
+      display: block;
       background: #fff;
       border: 1px solid #ddd;
-      padding: .5rem 1.25rem;
+      padding: 1.35rem 2.25rem;
       border-radius: 5px;
       cursor: pointer;
       color: #444;
       transition: box-shadow 400ms ease;
+      margin: 1rem 0;
       
       &:hover {
         box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);

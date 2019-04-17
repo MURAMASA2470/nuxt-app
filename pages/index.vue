@@ -2,7 +2,9 @@
   <v-layout column justify-center align-center>
     <v-flex xs12 sm8 md6>
 
-    <radio-group :items="items"></radio-group>
+    <form action="" method="POST">
+      <radio-group :items="items"></radio-group>
+    </form>
 
     </v-flex>
   </v-layout>
